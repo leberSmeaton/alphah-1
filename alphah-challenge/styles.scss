@@ -1,0 +1,341 @@
+$mine: #373737;
+$copper: #bb8934;
+
+@font-face {
+  font-family: "Morion-Light";
+  src: url(./CodingChallenge/fonts/Morion-Light.WOFF);
+}
+@font-face {
+  font-family: "Morion-UltraLight";
+  src: url(./CodingChallenge/fonts/Morion-UltraLight.WOFF);
+}
+@font-face {
+  font-family: "AktivGrotesk-Bold";
+  src: url(./CodingChallenge/fonts/AktivGrotesk-Bold.WOFF);
+}
+@font-face {
+  font-family: "AktivGrotesk-Regular";
+  src: url(./CodingChallenge/fonts/AktivGrotesk-Regular.WOFF);
+}
+@font-face {
+  font-family: "AktivGrotesk-Medium";
+  src: url(./CodingChallenge/fonts/AktivGrotesk-Medium.WOFF);
+}
+@font-face {
+  font-family: "AktivGrotesk-Light";
+  src: url(./CodingChallenge/fonts/AktivGrotesk-Light.WOFF);
+}
+
+#hero {
+  display: none;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  header {
+    .banner {
+      background-color: $mine;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      position: absolute;
+      height: 48px;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      z-index: 1;
+      a {
+        p {
+          position: absolute;
+          margin: 0;
+          left: 5.87%;
+          right: 5.6%;
+          top: 16px;
+          bottom: 16px;
+          font-family: "AktivGrotesk-Regular";
+          font-size: 14px;
+          line-height: 16px;
+          font-weight: 300;
+          text-align: center;
+          text-transform: uppercase;
+          color: #ffffff;
+          span {
+            text-decoration: underline;
+          }
+        }
+        &:hover {
+          p {
+            color: $copper;
+          }
+        }
+      }
+    }
+  }
+
+  #nav-mobile {
+    color: white;
+    display: none;
+    // display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 25px;
+    height: 53px;
+    width: 100%;
+    top: 40px;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+
+    svg.white_logo {
+      path {
+        fill: white;
+        height: 26px;
+        width: 125px;
+      }
+    }
+  }
+
+  main {
+    #hero {
+      background-image: url("./CodingChallenge/assets/banner-image__mobile.png");
+      background-repeat: none;
+      position: absolute;
+      // min-height: 750px;
+      top: 0;
+      z-index: 0;
+
+      div {
+        margin: 133px 25px;
+        height: 242px;
+        display: flex;
+        flex-direction: column;
+        p {
+          position: static;
+          font-family: "AktivGrotesk-Bold";
+          font-size: 12px;
+          line-height: 14px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin: 0;
+        }
+
+        h1 {
+          position: static;
+          top: calc(50% - 72px / 2 - 55px);
+
+          font-family: "Morion-UltraLight", serif;
+          font-style: normal;
+          font-weight: 100;
+          font-size: 32px;
+          line-height: 36px;
+          /* or 112% */
+          letter-spacing: -0.028px;
+          margin: 16px 0;
+          span {
+            color: white;
+          }
+        }
+
+        h3 {
+          position: static;
+          font-family: "AktivGrotesk-Light";
+          font-weight: normal;
+          color: white;
+          font-size: 16px;
+          line-height: 24px;
+          margin: 0 0 16px 0;
+        }
+
+        button {
+          font-family: "AktivGrotesk-Medium";
+          position: static;
+          font-size: 16px;
+          background: $mine;
+          color: white;
+          border: 2px solid $mine;
+          height: 60px;
+          width: 100%;
+        }
+      }
+    }
+
+    #content {
+      font-family: serif;
+      margin: 808px 25px 0 25px;
+
+      .activate,
+      .accelerate,
+      .advocate {
+        margin-bottom: 60px;
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        img {
+          width: 327px;
+        }
+        h2 {
+          font-family: "Morion-UltraLight";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 28px;
+          margin: 0;
+        }
+        p {
+          font-family: "AktivGrotesk-Light";
+          font-size: 16px;
+          line-height: 28px;
+          margin: 0;
+        }
+        a {
+          font-family: "AktivGrotesk-Medium";
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+          text-decoration: underline $mine solid 2px;
+          text-underline-offset: 10px;
+          color: $mine;
+
+          &:hover {
+            color: $copper;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 91px;
+  left: 0px;
+  margin-top: 40px;
+  padding: 0 88px;
+
+  a.__black_logo {
+    g {
+      path {
+        fill: $mine;
+      }
+    }
+    &:hover {
+      g {
+        path {
+          fill: $copper;
+        }
+      }
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+
+    .__nav-view {
+      margin: 0 60px;
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        font-family: "AktivGrotesk-Regular";
+        font-size: 16px;
+        line-height: 19px;
+        padding-left: 0;
+        li {
+          font-family: "AktivGrotesk-Regular";
+          font-size: 16px;
+          line-height: 19px;
+          padding-right: 20px;
+          text-align: right;
+          color: $mine;
+          a {
+            text-decoration: none;
+            color: $mine;
+            &:hover {
+              color: $copper;
+            }
+          }
+          &:last-child {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+
+    .__nav-icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .--account {
+        padding-right: 20px;
+        path,
+        circle {
+          stroke: $mine;
+        }
+        &:hover {
+          path,
+          circle {
+            stroke: $copper;
+          }
+        }
+      }
+
+      .--search {
+        circle {
+          stroke: $mine;
+        }
+        rect {
+          stroke: $mine;
+          fill: $mine;
+        }
+        &:hover {
+          circle {
+            stroke: $copper;
+          }
+          rect {
+            stroke: $copper;
+            fill: $copper;
+          }
+        }
+      }
+
+      .--bag {
+        padding-right: 20px;
+        rect,
+        path {
+          stroke: $mine;
+        }
+        &:hover {
+          path {
+            stroke: $copper;
+          }
+          rect {
+            stroke: $copper;
+          }
+        }
+      }
+    }
+  }
+}

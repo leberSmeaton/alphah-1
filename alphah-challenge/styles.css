@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "Morion-Light";
+  src: url(./CodingChallenge/fonts/Morion-Light.WOFF);
+}
+@font-face {
+  font-family: "Morion-UltraLight";
+  src: url(./CodingChallenge/fonts/Morion-UltraLight.WOFF);
+}
+@font-face {
+  font-family: "AktivGrotesk-Bold";
+  src: url(./CodingChallenge/fonts/AktivGrotesk-Bold.WOFF);
+}
+@font-face {
+  font-family: "AktivGrotesk-Regular";
+  src: url(./CodingChallenge/fonts/AktivGrotesk-Regular.WOFF);
+}
+@font-face {
+  font-family: "AktivGrotesk-Medium";
+  src: url(./CodingChallenge/fonts/AktivGrotesk-Medium.WOFF);
+}
+@font-face {
+  font-family: "AktivGrotesk-Light";
+  src: url(./CodingChallenge/fonts/AktivGrotesk-Light.WOFF);
+}
+#hero {
+  display: none;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body header .banner {
+  background-color: #373737;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  height: 48px;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  z-index: 1;
+}
+body header .banner a p {
+  position: absolute;
+  margin: 0;
+  left: 5.87%;
+  right: 5.6%;
+  top: 16px;
+  bottom: 16px;
+  font-family: "AktivGrotesk-Regular";
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+body header .banner a p span {
+  text-decoration: underline;
+}
+body header .banner a:hover p {
+  color: #bb8934;
+}
+body #nav-mobile {
+  color: white;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 25px;
+  height: 53px;
+  width: 100%;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+}
+body #nav-mobile svg.white_logo path {
+  fill: white;
+  height: 26px;
+  width: 125px;
+}
+body main #hero {
+  background-image: url("./CodingChallenge/assets/banner-image__mobile.png");
+  background-repeat: none;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+body main #hero div {
+  margin: 133px 25px;
+  height: 242px;
+  display: flex;
+  flex-direction: column;
+}
+body main #hero div p {
+  position: static;
+  font-family: "AktivGrotesk-Bold";
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+body main #hero div h1 {
+  position: static;
+  top: calc(50% - 36px - 55px);
+  font-family: "Morion-UltraLight", serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 32px;
+  line-height: 36px;
+  /* or 112% */
+  letter-spacing: -0.028px;
+  margin: 16px 0;
+}
+body main #hero div h1 span {
+  color: white;
+}
+body main #hero div h3 {
+  position: static;
+  font-family: "AktivGrotesk-Light";
+  font-weight: normal;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 16px 0;
+}
+body main #hero div button {
+  font-family: "AktivGrotesk-Medium";
+  position: static;
+  font-size: 16px;
+  background: #373737;
+  color: white;
+  border: 2px solid #373737;
+  height: 60px;
+  width: 100%;
+}
+body main #content {
+  font-family: serif;
+  margin: 808px 25px 0 25px;
+}
+body main #content .activate,
+body main #content .accelerate,
+body main #content .advocate {
+  margin-bottom: 60px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main #content .activate img,
+body main #content .accelerate img,
+body main #content .advocate img {
+  width: 327px;
+}
+body main #content .activate h2,
+body main #content .accelerate h2,
+body main #content .advocate h2 {
+  font-family: "Morion-UltraLight";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+}
+body main #content .activate p,
+body main #content .accelerate p,
+body main #content .advocate p {
+  font-family: "AktivGrotesk-Light";
+  font-size: 16px;
+  line-height: 28px;
+  margin: 0;
+}
+body main #content .activate a,
+body main #content .accelerate a,
+body main #content .advocate a {
+  font-family: "AktivGrotesk-Medium";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: underline #373737 solid 2px;
+  text-underline-offset: 10px;
+  color: #373737;
+}
+body main #content .activate a:hover,
+body main #content .accelerate a:hover,
+body main #content .advocate a:hover {
+  color: #bb8934;
+}
+
+.nav-desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 91px;
+  left: 0px;
+  margin-top: 40px;
+  padding: 0 88px;
+}
+.nav-desktop a.__black_logo g path {
+  fill: #373737;
+}
+.nav-desktop a.__black_logo:hover g path {
+  fill: #bb8934;
+}
+.nav-desktop .nav-links {
+  display: flex;
+  flex-direction: row;
+}
+.nav-desktop .nav-links .__nav-view {
+  margin: 0 60px;
+}
+.nav-desktop .nav-links .__nav-view ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  font-family: "AktivGrotesk-Regular";
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 0;
+}
+.nav-desktop .nav-links .__nav-view ul li {
+  font-family: "AktivGrotesk-Regular";
+  font-size: 16px;
+  line-height: 19px;
+  padding-right: 20px;
+  text-align: right;
+  color: #373737;
+}
+.nav-desktop .nav-links .__nav-view ul li a {
+  text-decoration: none;
+  color: #373737;
+}
+.nav-desktop .nav-links .__nav-view ul li a:hover {
+  color: #bb8934;
+}
+.nav-desktop .nav-links .__nav-view ul li:last-child {
+  padding-right: 0px;
+}
+.nav-desktop .nav-links .__nav-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-desktop .nav-links .__nav-icon .--account {
+  padding-right: 20px;
+}
+.nav-desktop .nav-links .__nav-icon .--account path,
+.nav-desktop .nav-links .__nav-icon .--account circle {
+  stroke: #373737;
+}
+.nav-desktop .nav-links .__nav-icon .--account:hover path,
+.nav-desktop .nav-links .__nav-icon .--account:hover circle {
+  stroke: #bb8934;
+}
+.nav-desktop .nav-links .__nav-icon .--search circle {
+  stroke: #373737;
+}
+.nav-desktop .nav-links .__nav-icon .--search rect {
+  stroke: #373737;
+  fill: #373737;
+}
+.nav-desktop .nav-links .__nav-icon .--search:hover circle {
+  stroke: #bb8934;
+}
+.nav-desktop .nav-links .__nav-icon .--search:hover rect {
+  stroke: #bb8934;
+  fill: #bb8934;
+}
+.nav-desktop .nav-links .__nav-icon .--bag {
+  padding-right: 20px;
+}
+.nav-desktop .nav-links .__nav-icon .--bag rect,
+.nav-desktop .nav-links .__nav-icon .--bag path {
+  stroke: #373737;
+}
+.nav-desktop .nav-links .__nav-icon .--bag:hover path {
+  stroke: #bb8934;
+}
+.nav-desktop .nav-links .__nav-icon .--bag:hover rect {
+  stroke: #bb8934;
+}
+
+/*# sourceMappingURL=styles.css.map */
