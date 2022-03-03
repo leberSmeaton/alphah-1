@@ -5,47 +5,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alpha-H</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
   <header>
-    <div id="banner" class="banner">
+    <div class="announcement">
       <a href="#"><p>Free Shipping on orders over $25 <span>SHOP NOW</span></p></a>
     </div>
 
-    <nav id="nav-mobile">
-        <!-- hamburger menu -->
-        <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16.5 1.5H1.5" stroke="white" stroke-width="2" stroke-linecap="square" />
-          <path d="M12.5 10.5H1.5" stroke="white" stroke-width="2" stroke-linecap="square" />
-          <path d="M16.5 19.5H1.5" stroke="white" stroke-width="2" stroke-linecap="square" />
-        </svg>
+    <nav class="nav-mobile">
+      <!-- hamburger menu -->
+      <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.5 1.5H1.5" stroke="white" stroke-width="2" stroke-linecap="square" />
+        <path d="M12.5 10.5H1.5" stroke="white" stroke-width="2" stroke-linecap="square" />
+        <path d="M16.5 19.5H1.5" stroke="white" stroke-width="2" stroke-linecap="square" />
+      </svg>
 
-        <!-- logo -->
-        <svg class="white_logo" width="139" height="29" viewBox="0 0 139 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask0_2_33" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="139" height="29">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H139V29H0V0Z" fill="white" />
-          </mask>
-          <g mask="url(#mask0_2_33)">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M136.016 1.32203V18.7948H122.303V1.32203H119.318V18.7948H109.158L110.293 21.4913L119.318 21.4987V29H122.303V21.5005L136.016 21.5116V29H139V1.32203H136.016ZM92.1767 18.282L96.7592 7.19568L101.236 18.282H92.1767ZM84.4663 29H87.7355L90.9678 21.1442H102.407L105.57 29H108.874L96.8303 0L84.4663 29ZM78.4274 18.781H64.7141V1.32203H61.7302V29H64.7141V21.6441H78.4274V29H81.4113V1.32203H78.4274V18.781ZM48.691 14.0231H46.7018V4.18521H47.8035C51.2852 4.18521 54.802 4.51571 54.802 9.03051C54.802 12.9957 51.9954 14.0231 48.691 14.0231V14.0231ZM54.766 2.79044C52.8127 1.39476 50.4328 1.32203 48.1231 1.32203H43.7179V29H46.7018V16.8863H48.8693C51.1079 16.8863 53.4167 16.5926 55.2286 15.0505C56.8983 13.619 57.7867 11.3441 57.7867 9.10416C57.7867 6.64422 56.7561 4.22111 54.766 2.79044V2.79044ZM30.3034 1.32203H27.3186V29H40.7691V26.1368H30.3034V1.32203ZM7.70862 18.282L12.2911 7.19568L16.7683 18.282H7.70862ZM0 29H3.26743L6.50066 21.1442H17.9394L21.1015 29H24.4058L12.3622 0L0 29Z"
-              fill="#373737" />
-          </g>
-        </svg>
+      <!-- logo -->
+      <svg class="white_logo" width="139" height="29" viewBox="0 0 139 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="mask0_2_33" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="139" height="29">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H139V29H0V0Z" fill="white" />
+        </mask>
+        <g mask="url(#mask0_2_33)">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M136.016 1.32203V18.7948H122.303V1.32203H119.318V18.7948H109.158L110.293 21.4913L119.318 21.4987V29H122.303V21.5005L136.016 21.5116V29H139V1.32203H136.016ZM92.1767 18.282L96.7592 7.19568L101.236 18.282H92.1767ZM84.4663 29H87.7355L90.9678 21.1442H102.407L105.57 29H108.874L96.8303 0L84.4663 29ZM78.4274 18.781H64.7141V1.32203H61.7302V29H64.7141V21.6441H78.4274V29H81.4113V1.32203H78.4274V18.781ZM48.691 14.0231H46.7018V4.18521H47.8035C51.2852 4.18521 54.802 4.51571 54.802 9.03051C54.802 12.9957 51.9954 14.0231 48.691 14.0231V14.0231ZM54.766 2.79044C52.8127 1.39476 50.4328 1.32203 48.1231 1.32203H43.7179V29H46.7018V16.8863H48.8693C51.1079 16.8863 53.4167 16.5926 55.2286 15.0505C56.8983 13.619 57.7867 11.3441 57.7867 9.10416C57.7867 6.64422 56.7561 4.22111 54.766 2.79044V2.79044ZM30.3034 1.32203H27.3186V29H40.7691V26.1368H30.3034V1.32203ZM7.70862 18.282L12.2911 7.19568L16.7683 18.282H7.70862ZM0 29H3.26743L6.50066 21.1442H17.9394L21.1015 29H24.4058L12.3622 0L0 29Z"
+            fill="#373737" />
+        </g>
+      </svg>
 
-        <!-- bag -->
-        <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="6" width="20" height="17" stroke="white" stroke-width="2" />
-          <path d="M15 5C15 2.79086 13.2091 1 11 1C8.79086 1 7 2.79086 7 5" stroke="white" stroke-width="2" />
-        </svg>
-
-      </div>
+      <!-- bag -->
+      <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="6" width="20" height="17" stroke="white" stroke-width="2" />
+        <path d="M15 5C15 2.79086 13.2091 1 11 1C8.79086 1 7 2.79086 7 5" stroke="white" stroke-width="2" />
+      </svg>
     </nav>
 
 
     <nav class="nav-desktop">
-      <!-- black logo -->
       <a class="__black_logo" href="#">
         <svg width="125" height="26" viewBox="0 0 125 26" fill="none" xmlns="http://www.w3.org/2000/svg">
           <mask id="mask0_2_294" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="125" height="26">
@@ -58,8 +55,6 @@
           </g>
         </svg>
       </a>
-
-      <!-- links -->
       <div class="nav-links">
         <!-- nav-links -->
         <div class="__nav-view"> 
@@ -99,28 +94,23 @@
     </nav>
   </header>
 
-  <!-- hero mobile -->
-  <img class="hero-mobile" src="./CodingChallenge/assets/banner-image__mobile.png" alt="man head in arms holding serum bottle">
-
-  <!-- hero desktop -->
-  <img class="hero-desktop" src="./CodingChallenge/assets/banner-image__desktop.png" alt="man head in arms holding serum bottle">
-
   <main>
-    <section id="hero">
-      <!-- image -->
-      <!-- on sale now -->
+    <!-- hero mobile -->
+    <img class="hero-mobile" src="./CodingChallenge/assets/banner-image__mobile.png" alt="man holding serum bottle">
+  
+    <!-- hero desktop -->
+    <img class="hero-desktop" src="./CodingChallenge/assets/banner-image__desktop.png" alt="man head in arms holding serum bottle">
+
+    <section class="hero">
       <div>
         <p>on sale now</p>
-        <!-- h1 -->
         <h1>The Super Serum, <span>for plump, youthful skin.</span></h1>
-        <!-- body -->
         <h3>Powered by Retinol, the gentle age-defying serum for everyone.</h3>
-        <!-- cta -->
         <button>Shop Now</button>
       </div>
     </section>
 
-    <section id="content">
+    <section class="content">
       <article class="activate">
         <img src="./CodingChallenge/assets/tile-image__activate.png" alt="white activate tubes">
         <!-- h2 -->

@@ -1,34 +1,4 @@
-$mine: #373737;
-$copper: #bb8934;
-
-@font-face {
-  font-family: "Morion-Light";
-  src: url(./CodingChallenge/fonts/Morion-Light.WOFF);
-}
-@font-face {
-  font-family: "Morion-UltraLight";
-  src: url(./CodingChallenge/fonts/Morion-UltraLight.WOFF);
-}
-@font-face {
-  font-family: "AktivGrotesk-Bold";
-  src: url(./CodingChallenge/fonts/AktivGrotesk-Bold.WOFF);
-}
-@font-face {
-  font-family: "AktivGrotesk-Regular";
-  src: url(./CodingChallenge/fonts/AktivGrotesk-Regular.WOFF);
-}
-@font-face {
-  font-family: "AktivGrotesk-Medium";
-  src: url(./CodingChallenge/fonts/AktivGrotesk-Medium.WOFF);
-}
-@font-face {
-  font-family: "AktivGrotesk-Light";
-  src: url(./CodingChallenge/fonts/AktivGrotesk-Light.WOFF);
-}
-
-html {
-  position: relative;
-}
+@import "./variables";
 
 body {
   box-sizing: border-box;
@@ -37,16 +7,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 16px;
 
   header {
-    .banner {
+    .announcement {
       background-color: $mine;
       display: flex;
       justify-content: space-around;
       align-items: center;
 
       position: absolute;
-      height: 48px;
+      height: 40px;
       left: 0%;
       right: 0%;
       top: 0%;
@@ -58,15 +29,15 @@ body {
           margin: 0;
           left: 5.87%;
           right: 5.6%;
-          top: 16px;
-          bottom: 16px;
-          font-family: "AktivGrotesk-Regular";
+          top: 30%;
+          bottom: 30%;
+          font-family: $aktivgrotesk-regular;
           font-size: 14px;
           line-height: 16px;
           font-weight: 300;
           text-align: center;
           text-transform: uppercase;
-          color: #ffffff;
+          color: $white;
           span {
             text-decoration: underline;
           }
@@ -79,9 +50,8 @@ body {
       }
     }
 
-    #nav-mobile {
+    .nav-mobile {
       color: white;
-      // display: none;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -101,11 +71,6 @@ body {
           height: 26px;
           width: 125px;
         }
-      }
-    }
-    @media screen and (min-width: 425px) {
-      #nav-mobile {
-        display: none;
       }
     }
 
@@ -130,9 +95,12 @@ body {
           }
         }
         &:hover {
-          g {
-            path {
-              fill: $copper;
+          cursor: pointer;
+          svg {
+            g {
+              path {
+                fill: $copper;
+              }
             }
           }
         }
@@ -143,23 +111,20 @@ body {
         flex-direction: row;
 
         .__nav-view {
-          margin: 0 60px;
+          margin: 0 15px;
           ul {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             list-style-type: none;
-            font-family: "AktivGrotesk-Regular";
-            font-size: 16px;
-            line-height: 19px;
             padding-left: 0;
             li {
-              font-family: "AktivGrotesk-Regular";
+              font-family: $aktivgrotesk-regular;
               font-size: 16px;
               line-height: 19px;
-              padding-right: 20px;
-              text-align: right;
+              padding-right: 15px;
+              text-align: center;
               color: $mine;
               a {
                 text-decoration: none;
@@ -181,7 +146,7 @@ body {
           align-items: center;
 
           .--account {
-            padding-right: 20px;
+            padding: 0 20px 0 10px;
             path,
             circle {
               stroke: $mine;
@@ -231,40 +196,24 @@ body {
         }
       }
     }
-    @media screen and (max-width: 424px) {
-      .nav-desktop {
-        display: none;
-      }
-    }
-  }
-
-  // hero img
-  @media screen and (max-width: 424px) {
-    img.hero-desktop {
-      display: none;
-    }
-  }
-
-  @media screen and (min-width: 425px) {
-    img.hero-mobile {
-      display: none;
-    }
   }
 
   main {
-    #hero {
+    .hero {
       position: absolute;
       top: 0;
       z-index: 0;
+      width: 100%;
 
       div {
-        margin: 133px 25px;
-        height: 242px;
+        margin: 139px 25px 0 25px;
+        min-height: 242px;
         display: flex;
         flex-direction: column;
+        max-width: 328px;
         p {
           position: static;
-          font-family: "AktivGrotesk-Bold";
+          font-family: $aktivgrotesk-bold;
           font-size: 12px;
           line-height: 14px;
           letter-spacing: 2px;
@@ -276,12 +225,11 @@ body {
           position: static;
           top: calc(50% - 72px / 2 - 55px);
 
-          font-family: "Morion-UltraLight", serif;
+          font-family: $morion-ultra-light, serif;
           font-style: normal;
           font-weight: 100;
           font-size: 32px;
           line-height: 36px;
-          /* or 112% */
           letter-spacing: -0.028px;
           margin: 16px 0;
           span {
@@ -291,7 +239,7 @@ body {
 
         h3 {
           position: static;
-          font-family: "AktivGrotesk-Light";
+          font-family: $aktivgrotesk-light;
           font-weight: normal;
           color: white;
           font-size: 16px;
@@ -300,7 +248,7 @@ body {
         }
 
         button {
-          font-family: "AktivGrotesk-Medium";
+          font-family: $aktivgrotesk-medium;
           position: static;
           font-size: 16px;
           background: $mine;
@@ -308,21 +256,17 @@ body {
           border: 2px solid $mine;
           height: 60px;
           width: 100%;
+          &:hover {
+            color: $copper;
+          }
         }
       }
     }
 
-    @media screen and (min-width: 425px) {
-      #hero {
-        display: none;
-      }
-    }
-
-    #content {
+    .content {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-wrap: column wrap;
+      align-content: center;
       font-family: serif;
       margin: 50px 25px 0 25px;
 
@@ -336,8 +280,13 @@ body {
         justify-content: space-between;
         max-width: 327px;
 
+        img {
+          min-width: 327px;
+          min-height: 245px;
+        }
+
         h2 {
-          font-family: "Morion-UltraLight";
+          font-family: $morion-ultra-light;
           font-style: normal;
           font-weight: 300;
           font-size: 24px;
@@ -346,23 +295,16 @@ body {
         }
 
         p {
-          font-family: "AktivGrotesk-Light";
+          font-family: $aktivgrotesk-light;
           font-size: 16px;
           line-height: 28px;
           margin: 0;
           padding-right: 10px;
           word-wrap: break-word;
-          /* mobile large +
-          @media screen and (min-width: 425px) {
-            span::before {
-              content: "\a";
-              white-space: pre;
-            }
-          } */
         }
 
         a {
-          font-family: "AktivGrotesk-Medium";
+          font-family: $aktivgrotesk-medium;
           font-weight: 500;
           font-size: 14px;
           line-height: 21px;
@@ -375,18 +317,132 @@ body {
             text-decoration-color: $copper;
           }
         }
+      }
+    }
+  }
+}
 
-        // mobile large +
-        @media screen and (min-width: 425px) {
+/* media queries */
+
+// mobile -
+@media screen and (max-width: 375px) {
+  header {
+    .announcement {
+      a {
+        p {
+          font-size: 0.7em;
+        }
+      }
+    }
+  }
+
+  main {
+    img.hero-desktop {
+      display: none;
+    }
+    img.hero-mobile {
+      max-width: 100vw;
+    }
+  }
+}
+
+// mobile +
+@media screen and (min-width: 376px) {
+  main {
+    img.hero-mobile {
+      display: none;
+      object-fit: cover;
+    }
+    img.hero-desktop {
+      max-width: 100vw;
+      height: 885px;
+      object-fit: cover;
+    }
+  }
+}
+
+// mobile large +
+@media screen and (min-width: 425px) {
+  body {
+    header {
+      .announcement {
+        max-height: 48px;
+        a {
+          p {
+            top: 33.33%;
+            bottom: 33.33%;
+          }
+        }
+      }
+    }
+    main {
+      .content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        justify-content: center;
+
+        .activate,
+        .accelerate,
+        .advocate {
           max-width: 422px;
           margin-right: 5px;
           margin-left: 5px;
           height: 463px;
+
+          img {
+            max-width: 405px;
+            max-height: 300px;
+          }
         }
       }
-      // mobile large +
-      @media screen and (min-width: 425px) {
+    }
+  }
+}
+
+// ipad +
+@media screen and (min-width: 768px) {
+  body {
+    header {
+      .nav-mobile {
+        display: none;
+      }
+    }
+
+    main {
+      .hero {
+        div {
+          margin: 0px 80px 0 80px;
+          transform: translate(0px, 669px);
+          max-width: 600px;
+          height: 293px;
+          h1 {
+            font-size: 50px;
+            line-height: 60px;
+            letter-spacing: -0.05px;
+            margin: 24px 0 24px 0;
+          }
+          h3 {
+            margin: 0 0 24px 0;
+          }
+          button {
+            width: 291px;
+          }
+        }
+      }
+      .content {
         margin: 50px 80px 0 80px;
+      }
+    }
+  }
+}
+
+// ipad -
+@media screen and (max-width: 767px) {
+  body {
+    header {
+      .nav-desktop {
+        display: none;
       }
     }
   }
