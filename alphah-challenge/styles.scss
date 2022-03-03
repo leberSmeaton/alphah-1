@@ -26,10 +26,6 @@ $copper: #bb8934;
   src: url(./CodingChallenge/fonts/AktivGrotesk-Light.WOFF);
 }
 
-#hero {
-  display: none;
-}
-
 html {
   position: relative;
 }
@@ -82,39 +78,182 @@ body {
         }
       }
     }
+
+    #nav-mobile {
+      color: white;
+      // display: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding: 0 25px;
+      height: 53px;
+      width: 100%;
+      top: 40px;
+      left: 0;
+      z-index: 1;
+      position: absolute;
+
+      svg.white_logo {
+        path {
+          fill: white;
+          height: 26px;
+          width: 125px;
+        }
+      }
+    }
+    @media screen and (min-width: 425px) {
+      #nav-mobile {
+        display: none;
+      }
+    }
+
+    .nav-desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 91px;
+      left: 0px;
+      margin-top: 40px;
+      padding: 0 88px;
+
+      a.__black_logo {
+        svg {
+          width: 139px;
+          height: 29px;
+          g {
+            path {
+              fill: $mine;
+            }
+          }
+        }
+        &:hover {
+          g {
+            path {
+              fill: $copper;
+            }
+          }
+        }
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+
+        .__nav-view {
+          margin: 0 60px;
+          ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            font-family: "AktivGrotesk-Regular";
+            font-size: 16px;
+            line-height: 19px;
+            padding-left: 0;
+            li {
+              font-family: "AktivGrotesk-Regular";
+              font-size: 16px;
+              line-height: 19px;
+              padding-right: 20px;
+              text-align: right;
+              color: $mine;
+              a {
+                text-decoration: none;
+                color: $mine;
+                &:hover {
+                  color: $copper;
+                }
+              }
+              &:last-child {
+                padding-right: 0px;
+              }
+            }
+          }
+        }
+
+        .__nav-icon {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .--account {
+            padding-right: 20px;
+            path,
+            circle {
+              stroke: $mine;
+            }
+            &:hover {
+              path,
+              circle {
+                stroke: $copper;
+              }
+            }
+          }
+
+          .--search {
+            circle {
+              stroke: $mine;
+            }
+            rect {
+              stroke: $mine;
+              fill: $mine;
+            }
+            &:hover {
+              circle {
+                stroke: $copper;
+              }
+              rect {
+                stroke: $copper;
+                fill: $copper;
+              }
+            }
+          }
+
+          .--bag {
+            padding-right: 20px;
+            rect,
+            path {
+              stroke: $mine;
+            }
+            &:hover {
+              path {
+                stroke: $copper;
+              }
+              rect {
+                stroke: $copper;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 424px) {
+      .nav-desktop {
+        display: none;
+      }
+    }
   }
 
-  #nav-mobile {
-    color: white;
-    display: none;
-    // display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 0 25px;
-    height: 53px;
-    width: 100%;
-    top: 40px;
-    left: 0;
-    z-index: 1;
-    position: absolute;
+  // hero img
+  @media screen and (max-width: 424px) {
+    img.hero-desktop {
+      display: none;
+    }
+  }
 
-    svg.white_logo {
-      path {
-        fill: white;
-        height: 26px;
-        width: 125px;
-      }
+  @media screen and (min-width: 425px) {
+    img.hero-mobile {
+      display: none;
     }
   }
 
   main {
     #hero {
-      background-image: url("./CodingChallenge/assets/banner-image__mobile.png");
-      background-repeat: none;
       position: absolute;
-      // min-height: 750px;
       top: 0;
       z-index: 0;
 
@@ -173,9 +312,19 @@ body {
       }
     }
 
+    @media screen and (min-width: 425px) {
+      #hero {
+        display: none;
+      }
+    }
+
     #content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
       font-family: serif;
-      margin: 808px 25px 0 25px;
+      margin: 50px 25px 0 25px;
 
       .activate,
       .accelerate,
@@ -185,10 +334,8 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        max-width: 327px;
 
-        img {
-          width: 327px;
-        }
         h2 {
           font-family: "Morion-UltraLight";
           font-style: normal;
@@ -197,12 +344,23 @@ body {
           line-height: 28px;
           margin: 0;
         }
+
         p {
           font-family: "AktivGrotesk-Light";
           font-size: 16px;
           line-height: 28px;
           margin: 0;
+          padding-right: 10px;
+          word-wrap: break-word;
+          /* mobile large +
+          @media screen and (min-width: 425px) {
+            span::before {
+              content: "\a";
+              white-space: pre;
+            }
+          } */
         }
+
         a {
           font-family: "AktivGrotesk-Medium";
           font-weight: 500;
@@ -214,127 +372,21 @@ body {
 
           &:hover {
             color: $copper;
+            text-decoration-color: $copper;
           }
+        }
+
+        // mobile large +
+        @media screen and (min-width: 425px) {
+          max-width: 422px;
+          margin-right: 5px;
+          margin-left: 5px;
+          height: 463px;
         }
       }
-    }
-  }
-}
-
-.nav-desktop {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 91px;
-  left: 0px;
-  margin-top: 40px;
-  padding: 0 88px;
-
-  a.__black_logo {
-    g {
-      path {
-        fill: $mine;
-      }
-    }
-    &:hover {
-      g {
-        path {
-          fill: $copper;
-        }
-      }
-    }
-  }
-
-  .nav-links {
-    display: flex;
-    flex-direction: row;
-
-    .__nav-view {
-      margin: 0 60px;
-      ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        list-style-type: none;
-        font-family: "AktivGrotesk-Regular";
-        font-size: 16px;
-        line-height: 19px;
-        padding-left: 0;
-        li {
-          font-family: "AktivGrotesk-Regular";
-          font-size: 16px;
-          line-height: 19px;
-          padding-right: 20px;
-          text-align: right;
-          color: $mine;
-          a {
-            text-decoration: none;
-            color: $mine;
-            &:hover {
-              color: $copper;
-            }
-          }
-          &:last-child {
-            padding-right: 0px;
-          }
-        }
-      }
-    }
-
-    .__nav-icon {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .--account {
-        padding-right: 20px;
-        path,
-        circle {
-          stroke: $mine;
-        }
-        &:hover {
-          path,
-          circle {
-            stroke: $copper;
-          }
-        }
-      }
-
-      .--search {
-        circle {
-          stroke: $mine;
-        }
-        rect {
-          stroke: $mine;
-          fill: $mine;
-        }
-        &:hover {
-          circle {
-            stroke: $copper;
-          }
-          rect {
-            stroke: $copper;
-            fill: $copper;
-          }
-        }
-      }
-
-      .--bag {
-        padding-right: 20px;
-        rect,
-        path {
-          stroke: $mine;
-        }
-        &:hover {
-          path {
-            stroke: $copper;
-          }
-          rect {
-            stroke: $copper;
-          }
-        }
+      // mobile large +
+      @media screen and (min-width: 425px) {
+        margin: 50px 80px 0 80px;
       }
     }
   }

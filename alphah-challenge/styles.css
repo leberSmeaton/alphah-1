@@ -22,10 +22,6 @@
   font-family: "AktivGrotesk-Light";
   src: url(./CodingChallenge/fonts/AktivGrotesk-Light.WOFF);
 }
-#hero {
-  display: none;
-}
-
 html {
   position: relative;
 }
@@ -72,9 +68,9 @@ body header .banner a p span {
 body header .banner a:hover p {
   color: #bb8934;
 }
-body #nav-mobile {
+body header #nav-mobile {
   color: white;
-  display: none;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -87,14 +83,131 @@ body #nav-mobile {
   z-index: 1;
   position: absolute;
 }
-body #nav-mobile svg.white_logo path {
+body header #nav-mobile svg.white_logo path {
   fill: white;
   height: 26px;
   width: 125px;
 }
+@media screen and (min-width: 425px) {
+  body header #nav-mobile {
+    display: none;
+  }
+}
+body header .nav-desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 91px;
+  left: 0px;
+  margin-top: 40px;
+  padding: 0 88px;
+}
+body header .nav-desktop a.__black_logo svg {
+  width: 139px;
+  height: 29px;
+}
+body header .nav-desktop a.__black_logo svg g path {
+  fill: #373737;
+}
+body header .nav-desktop a.__black_logo:hover g path {
+  fill: #bb8934;
+}
+body header .nav-desktop .nav-links {
+  display: flex;
+  flex-direction: row;
+}
+body header .nav-desktop .nav-links .__nav-view {
+  margin: 0 60px;
+}
+body header .nav-desktop .nav-links .__nav-view ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  font-family: "AktivGrotesk-Regular";
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 0;
+}
+body header .nav-desktop .nav-links .__nav-view ul li {
+  font-family: "AktivGrotesk-Regular";
+  font-size: 16px;
+  line-height: 19px;
+  padding-right: 20px;
+  text-align: right;
+  color: #373737;
+}
+body header .nav-desktop .nav-links .__nav-view ul li a {
+  text-decoration: none;
+  color: #373737;
+}
+body header .nav-desktop .nav-links .__nav-view ul li a:hover {
+  color: #bb8934;
+}
+body header .nav-desktop .nav-links .__nav-view ul li:last-child {
+  padding-right: 0px;
+}
+body header .nav-desktop .nav-links .__nav-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .nav-desktop .nav-links .__nav-icon .--account {
+  padding-right: 20px;
+}
+body header .nav-desktop .nav-links .__nav-icon .--account path,
+body header .nav-desktop .nav-links .__nav-icon .--account circle {
+  stroke: #373737;
+}
+body header .nav-desktop .nav-links .__nav-icon .--account:hover path,
+body header .nav-desktop .nav-links .__nav-icon .--account:hover circle {
+  stroke: #bb8934;
+}
+body header .nav-desktop .nav-links .__nav-icon .--search circle {
+  stroke: #373737;
+}
+body header .nav-desktop .nav-links .__nav-icon .--search rect {
+  stroke: #373737;
+  fill: #373737;
+}
+body header .nav-desktop .nav-links .__nav-icon .--search:hover circle {
+  stroke: #bb8934;
+}
+body header .nav-desktop .nav-links .__nav-icon .--search:hover rect {
+  stroke: #bb8934;
+  fill: #bb8934;
+}
+body header .nav-desktop .nav-links .__nav-icon .--bag {
+  padding-right: 20px;
+}
+body header .nav-desktop .nav-links .__nav-icon .--bag rect,
+body header .nav-desktop .nav-links .__nav-icon .--bag path {
+  stroke: #373737;
+}
+body header .nav-desktop .nav-links .__nav-icon .--bag:hover path {
+  stroke: #bb8934;
+}
+body header .nav-desktop .nav-links .__nav-icon .--bag:hover rect {
+  stroke: #bb8934;
+}
+@media screen and (max-width: 424px) {
+  body header .nav-desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 424px) {
+  body img.hero-desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 425px) {
+  body img.hero-mobile {
+    display: none;
+  }
+}
 body main #hero {
-  background-image: url("./CodingChallenge/assets/banner-image__mobile.png");
-  background-repeat: none;
   position: absolute;
   top: 0;
   z-index: 0;
@@ -148,9 +261,18 @@ body main #hero div button {
   height: 60px;
   width: 100%;
 }
+@media screen and (min-width: 425px) {
+  body main #hero {
+    display: none;
+  }
+}
 body main #content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   font-family: serif;
-  margin: 808px 25px 0 25px;
+  margin: 50px 25px 0 25px;
 }
 body main #content .activate,
 body main #content .accelerate,
@@ -160,11 +282,7 @@ body main #content .advocate {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-body main #content .activate img,
-body main #content .accelerate img,
-body main #content .advocate img {
-  width: 327px;
+  max-width: 327px;
 }
 body main #content .activate h2,
 body main #content .accelerate h2,
@@ -183,6 +301,15 @@ body main #content .advocate p {
   font-size: 16px;
   line-height: 28px;
   margin: 0;
+  padding-right: 10px;
+  word-wrap: break-word;
+  /* mobile large +
+  @media screen and (min-width: 425px) {
+    span::before {
+      content: "\a";
+      white-space: pre;
+    }
+  } */
 }
 body main #content .activate a,
 body main #content .accelerate a,
@@ -199,102 +326,22 @@ body main #content .activate a:hover,
 body main #content .accelerate a:hover,
 body main #content .advocate a:hover {
   color: #bb8934;
+  text-decoration-color: #bb8934;
 }
-
-.nav-desktop {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 91px;
-  left: 0px;
-  margin-top: 40px;
-  padding: 0 88px;
+@media screen and (min-width: 425px) {
+  body main #content .activate,
+body main #content .accelerate,
+body main #content .advocate {
+    max-width: 422px;
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 463px;
+  }
 }
-.nav-desktop a.__black_logo g path {
-  fill: #373737;
-}
-.nav-desktop a.__black_logo:hover g path {
-  fill: #bb8934;
-}
-.nav-desktop .nav-links {
-  display: flex;
-  flex-direction: row;
-}
-.nav-desktop .nav-links .__nav-view {
-  margin: 0 60px;
-}
-.nav-desktop .nav-links .__nav-view ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-  font-family: "AktivGrotesk-Regular";
-  font-size: 16px;
-  line-height: 19px;
-  padding-left: 0;
-}
-.nav-desktop .nav-links .__nav-view ul li {
-  font-family: "AktivGrotesk-Regular";
-  font-size: 16px;
-  line-height: 19px;
-  padding-right: 20px;
-  text-align: right;
-  color: #373737;
-}
-.nav-desktop .nav-links .__nav-view ul li a {
-  text-decoration: none;
-  color: #373737;
-}
-.nav-desktop .nav-links .__nav-view ul li a:hover {
-  color: #bb8934;
-}
-.nav-desktop .nav-links .__nav-view ul li:last-child {
-  padding-right: 0px;
-}
-.nav-desktop .nav-links .__nav-icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-desktop .nav-links .__nav-icon .--account {
-  padding-right: 20px;
-}
-.nav-desktop .nav-links .__nav-icon .--account path,
-.nav-desktop .nav-links .__nav-icon .--account circle {
-  stroke: #373737;
-}
-.nav-desktop .nav-links .__nav-icon .--account:hover path,
-.nav-desktop .nav-links .__nav-icon .--account:hover circle {
-  stroke: #bb8934;
-}
-.nav-desktop .nav-links .__nav-icon .--search circle {
-  stroke: #373737;
-}
-.nav-desktop .nav-links .__nav-icon .--search rect {
-  stroke: #373737;
-  fill: #373737;
-}
-.nav-desktop .nav-links .__nav-icon .--search:hover circle {
-  stroke: #bb8934;
-}
-.nav-desktop .nav-links .__nav-icon .--search:hover rect {
-  stroke: #bb8934;
-  fill: #bb8934;
-}
-.nav-desktop .nav-links .__nav-icon .--bag {
-  padding-right: 20px;
-}
-.nav-desktop .nav-links .__nav-icon .--bag rect,
-.nav-desktop .nav-links .__nav-icon .--bag path {
-  stroke: #373737;
-}
-.nav-desktop .nav-links .__nav-icon .--bag:hover path {
-  stroke: #bb8934;
-}
-.nav-desktop .nav-links .__nav-icon .--bag:hover rect {
-  stroke: #bb8934;
+@media screen and (min-width: 425px) {
+  body main #content {
+    margin: 50px 80px 0 80px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
