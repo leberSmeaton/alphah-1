@@ -27,9 +27,9 @@ $white: #ffffff;
   src: url(../CodingChallenge/fonts/AktivGrotesk-Light.WOFF);
 }
 
-$morion-light: "Morion-Light";
-$morion-ultra-light: "Morion-UltraLight";
-$aktivgrotesk-bold: "AktivGrotesk-Bold";
-$aktivgrotesk-regular: "AktivGrotesk-Regular";
-$aktivgrotesk-medium: "AktivGrotesk-Medium";
-$aktivgrotesk-light: "AktivGrotesk-Light";
+$morion-light: "Morion-Light", serif;
+$morion-ultra-light: "Morion-UltraLight", serif;
+$aktivgrotesk-bold: "AktivGrotesk-Bold", sans-serif;
+$aktivgrotesk-regular: "AktivGrotesk-Regular", sans-serif;
+$aktivgrotesk-medium: "AktivGrotesk-Medium", sans-serif;
+$aktivgrotesk-light: "AktivGrotesk-Light", sans-serif;
