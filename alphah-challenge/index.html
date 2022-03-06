@@ -1,150 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alpha-H</title>
-  <link rel="stylesheet" href="./styles/styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alpha-H</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
 
-<body>
-  <header>
-    <div class="announcement">
-      <a href="#"><p>Free Shipping on orders over $25 <span>SHOP NOW</span></p></a>
-    </div>
+  <body>
+    <header>
+      <div class="announcement">
+        <a href="#" aria-label="Learn more about free shipping over"
+          ><p>Free Shipping on orders over $25 <span>SHOP NOW</span></p></a
+        >
+      </div>
 
-    <nav class="nav-mobile">
-      <!-- hamburger menu -->
-      <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16.5 1.5H1.5" stroke="white" stroke-width="2" stroke-linecap="square" />
-        <path d="M12.5 10.5H1.5" stroke="white" stroke-width="2" stroke-linecap="square" />
-        <path d="M16.5 19.5H1.5" stroke="white" stroke-width="2" stroke-linecap="square" />
-      </svg>
+      <nav class="nav-mobile" aria-label="Main Mobile navigation">
+        <!-- hamburger menu -->
+        <svg
+          width="18"
+          height="21"
+          viewBox="0 0 18 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          aria-label="Collapsable Menu"
+        >
+          <path
+            d="M16.5 1.5H1.5"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="square"
+          />
+          <path
+            d="M12.5 10.5H1.5"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="square"
+          />
+          <path
+            d="M16.5 19.5H1.5"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="square"
+          />
+        </svg>
 
-      <!-- logo -->
-      <svg class="white_logo" width="139" height="29" viewBox="0 0 139 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <mask id="mask0_2_33" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="139" height="29">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H139V29H0V0Z" fill="white" />
-        </mask>
-        <g mask="url(#mask0_2_33)">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M136.016 1.32203V18.7948H122.303V1.32203H119.318V18.7948H109.158L110.293 21.4913L119.318 21.4987V29H122.303V21.5005L136.016 21.5116V29H139V1.32203H136.016ZM92.1767 18.282L96.7592 7.19568L101.236 18.282H92.1767ZM84.4663 29H87.7355L90.9678 21.1442H102.407L105.57 29H108.874L96.8303 0L84.4663 29ZM78.4274 18.781H64.7141V1.32203H61.7302V29H64.7141V21.6441H78.4274V29H81.4113V1.32203H78.4274V18.781ZM48.691 14.0231H46.7018V4.18521H47.8035C51.2852 4.18521 54.802 4.51571 54.802 9.03051C54.802 12.9957 51.9954 14.0231 48.691 14.0231V14.0231ZM54.766 2.79044C52.8127 1.39476 50.4328 1.32203 48.1231 1.32203H43.7179V29H46.7018V16.8863H48.8693C51.1079 16.8863 53.4167 16.5926 55.2286 15.0505C56.8983 13.619 57.7867 11.3441 57.7867 9.10416C57.7867 6.64422 56.7561 4.22111 54.766 2.79044V2.79044ZM30.3034 1.32203H27.3186V29H40.7691V26.1368H30.3034V1.32203ZM7.70862 18.282L12.2911 7.19568L16.7683 18.282H7.70862ZM0 29H3.26743L6.50066 21.1442H17.9394L21.1015 29H24.4058L12.3622 0L0 29Z"
-            fill="#373737" />
-        </g>
-      </svg>
-
-      <!-- bag -->
-      <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="6" width="20" height="17" stroke="white" stroke-width="2" />
-        <path d="M15 5C15 2.79086 13.2091 1 11 1C8.79086 1 7 2.79086 7 5" stroke="white" stroke-width="2" />
-      </svg>
-    </nav>
-
-
-    <nav class="nav-desktop">
-      <a class="__black_logo" href="#">
-        <svg width="125" height="26" viewBox="0 0 125 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <mask id="mask0_2_294" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="125" height="26">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H125V26H0V0Z" fill="white" />
+        <!-- logo -->
+        <svg
+          class="white_logo"
+          width="139"
+          height="29"
+          viewBox="0 0 139 29"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          aria-label="Company Alpha-H Logo"
+        >
+          <mask
+            id="mask0_2_33"
+            style="mask-type: alpha"
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="139"
+            height="29"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 0H139V29H0V0Z"
+              fill="white"
+            />
           </mask>
-          <g mask="url(#mask0_2_294)">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M122.317 1.18527V16.8505H109.985V1.18527H107.3V16.8505H98.164L99.1847 19.2681L107.3 19.2747V26H109.985V19.2763L122.317 19.2862V26H125V1.18527H122.317ZM82.8927 16.3907L87.0137 6.4513L91.0391 16.3907H82.8927ZM75.9589 26H78.8988L81.8056 18.9569H92.093L94.9367 26H97.9082L87.0776 0L75.9589 26ZM70.5282 16.8381H58.1961V1.18527H55.5127V26H58.1961V19.4051H70.5282V26H73.2116V1.18527H70.5282V16.8381ZM43.7869 12.5724H41.998V3.75225H42.9888C46.1198 3.75225 49.2823 4.04857 49.2823 8.09632C49.2823 11.6513 46.7584 12.5724 43.7869 12.5724V12.5724ZM49.25 2.50178C47.4934 1.25048 45.3532 1.18527 43.2761 1.18527H39.3146V26H41.998V15.1394H43.9472C45.9603 15.1394 48.0366 14.8761 49.666 13.4936C51.1676 12.2101 51.9665 10.1705 51.9665 8.16235C51.9665 5.95689 51.0397 3.78444 49.25 2.50178V2.50178ZM27.2513 1.18527H24.5671V26H36.6629V23.433H27.2513V1.18527ZM6.93221 16.3907L11.0532 6.4513L15.0794 16.3907H6.93221ZM0 26H2.93834L5.84592 18.9569H16.1325L18.9762 26H21.9477L11.1171 0L0 26Z"
-              fill="white" />
+          <g mask="url(#mask0_2_33)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M136.016 1.32203V18.7948H122.303V1.32203H119.318V18.7948H109.158L110.293 21.4913L119.318 21.4987V29H122.303V21.5005L136.016 21.5116V29H139V1.32203H136.016ZM92.1767 18.282L96.7592 7.19568L101.236 18.282H92.1767ZM84.4663 29H87.7355L90.9678 21.1442H102.407L105.57 29H108.874L96.8303 0L84.4663 29ZM78.4274 18.781H64.7141V1.32203H61.7302V29H64.7141V21.6441H78.4274V29H81.4113V1.32203H78.4274V18.781ZM48.691 14.0231H46.7018V4.18521H47.8035C51.2852 4.18521 54.802 4.51571 54.802 9.03051C54.802 12.9957 51.9954 14.0231 48.691 14.0231V14.0231ZM54.766 2.79044C52.8127 1.39476 50.4328 1.32203 48.1231 1.32203H43.7179V29H46.7018V16.8863H48.8693C51.1079 16.8863 53.4167 16.5926 55.2286 15.0505C56.8983 13.619 57.7867 11.3441 57.7867 9.10416C57.7867 6.64422 56.7561 4.22111 54.766 2.79044V2.79044ZM30.3034 1.32203H27.3186V29H40.7691V26.1368H30.3034V1.32203ZM7.70862 18.282L12.2911 7.19568L16.7683 18.282H7.70862ZM0 29H3.26743L6.50066 21.1442H17.9394L21.1015 29H24.4058L12.3622 0L0 29Z"
+              fill="#373737"
+            />
           </g>
         </svg>
-      </a>
-      <div class="nav-links">
-        <!-- nav-links -->
-        <div class="__nav-view"> 
-          <ul>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">3-Step Approach</a></li>
-            <li><a href="#">Find Your Routine</a></li>
-            <li><a href="#">Book a Consult</a></li>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">The Journal</a></li>
-          </ul>
+
+        <!-- bag -->
+        <svg
+          width="22"
+          height="24"
+          viewBox="0 0 22 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          aria-label="Checkout Bag"
+        >
+          <rect
+            x="1"
+            y="6"
+            width="20"
+            height="17"
+            stroke="white"
+            stroke-width="2"
+          />
+          <path
+            d="M15 5C15 2.79086 13.2091 1 11 1C8.79086 1 7 2.79086 7 5"
+            stroke="white"
+            stroke-width="2"
+          />
+        </svg>
+      </nav>
+
+      <nav class="nav-desktop" aria-label="Main Desktop navigation">
+        <a class="__black_logo" href="#" aria-label="Alpha-H homepage">
+          <svg
+            width="125"
+            height="26"
+            viewBox="0 0 125 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Company Alpha-H Logo"
+          >
+            <mask
+              id="mask0_2_294"
+              style="mask-type: alpha"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="125"
+              height="26"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 0H125V26H0V0Z"
+                fill="white"
+              />
+            </mask>
+            <g mask="url(#mask0_2_294)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M122.317 1.18527V16.8505H109.985V1.18527H107.3V16.8505H98.164L99.1847 19.2681L107.3 19.2747V26H109.985V19.2763L122.317 19.2862V26H125V1.18527H122.317ZM82.8927 16.3907L87.0137 6.4513L91.0391 16.3907H82.8927ZM75.9589 26H78.8988L81.8056 18.9569H92.093L94.9367 26H97.9082L87.0776 0L75.9589 26ZM70.5282 16.8381H58.1961V1.18527H55.5127V26H58.1961V19.4051H70.5282V26H73.2116V1.18527H70.5282V16.8381ZM43.7869 12.5724H41.998V3.75225H42.9888C46.1198 3.75225 49.2823 4.04857 49.2823 8.09632C49.2823 11.6513 46.7584 12.5724 43.7869 12.5724V12.5724ZM49.25 2.50178C47.4934 1.25048 45.3532 1.18527 43.2761 1.18527H39.3146V26H41.998V15.1394H43.9472C45.9603 15.1394 48.0366 14.8761 49.666 13.4936C51.1676 12.2101 51.9665 10.1705 51.9665 8.16235C51.9665 5.95689 51.0397 3.78444 49.25 2.50178V2.50178ZM27.2513 1.18527H24.5671V26H36.6629V23.433H27.2513V1.18527ZM6.93221 16.3907L11.0532 6.4513L15.0794 16.3907H6.93221ZM0 26H2.93834L5.84592 18.9569H16.1325L18.9762 26H21.9477L11.1171 0L0 26Z"
+                fill="white"
+              />
+            </g>
+          </svg>
+        </a>
+        <div class="nav-links">
+          <!-- nav-links -->
+          <div class="__nav-view">
+            <ul>
+              <li><a href="#" aria-label="Shop all items.">Shop</a></li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="Try This Transformative 3-Step Approach Using Alpha-H."
+                  >3-Step Approach</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="Find what is your best skin care routine."
+                  >Find Your Routine</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="Virtual Skin Consultant"
+                  >Book a Consult</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="Learn more about Alpha-H">Our Story</a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="Read articles on skin care and lifestyle."
+                  >The Journal</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- nav icons -->
+          <div class="__nav-icon">
+            <a class="--account" href="#" aria-label="Go to Account">
+              <svg
+                width="20"
+                height="21"
+                viewBox="0 0 20 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Account"
+              >
+                <path
+                  d="M19 21V18C19 15.7909 17.2091 14 15 14H5C2.79086 14 1 15.7909 1 18V21"
+                  stroke="#373737"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="10"
+                  cy="6"
+                  r="5"
+                  stroke="#373737"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
+            <a class="--bag" href="#" aria-label="Go to Checkout Bag">
+              <svg
+                width="22"
+                height="24"
+                viewBox="0 0 22 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Checkout Bag"
+              >
+                <rect
+                  x="1"
+                  y="6"
+                  width="20"
+                  height="17"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M15 5C15 2.79086 13.2091 1 11 1C8.79086 1 7 2.79086 7 5"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
+            <a class="--search" href="#" aria-label="Search Alpha-H">
+              <svg
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Search"
+              >
+                <circle
+                  cx="14.1421"
+                  cy="14.1421"
+                  r="9"
+                  transform="rotate(-45 14.1421 14.1421)"
+                  stroke="#373737"
+                  stroke-width="2"
+                />
+                <rect
+                  x="19.799"
+                  y="21.2132"
+                  width="2"
+                  height="7"
+                  transform="rotate(-45 19.799 21.2132)"
+                  fill="#373737"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
+      </nav>
+    </header>
 
-        <!-- nav icons -->
-        <div class="__nav-icon">
-          <a class="--account" href="#">
-            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 21V18C19 15.7909 17.2091 14 15 14H5C2.79086 14 1 15.7909 1 18V21" stroke="#373737" stroke-width="2" />
-              <circle cx="10" cy="6" r="5" stroke="#373737" stroke-width="2" />
-            </svg>
-          </a>
-          <a class="--bag" href="#">
-            <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1" y="6" width="20" height="17" stroke="white" stroke-width="2" />
-              <path d="M15 5C15 2.79086 13.2091 1 11 1C8.79086 1 7 2.79086 7 5" stroke="white" stroke-width="2" />
-            </svg>
-          </a>
-          <a class="--search" href="#">
-            <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="14.1421" cy="14.1421" r="9" transform="rotate(-45 14.1421 14.1421)" stroke="#373737" stroke-width="2" />
-              <rect x="19.799" y="21.2132" width="2" height="7" transform="rotate(-45 19.799 21.2132)" fill="#373737" />
-            </svg>
-          </a>
+    <main aria-label="Main Alpha-H Page Content">
+      <!-- hero mobile -->
+      <img
+        class="hero-mobile"
+        src="./CodingChallenge/assets/banner-image__mobile.png"
+        alt="man holding serum bottle"
+      />
+
+      <!-- hero desktop -->
+      <img
+        class="hero-desktop"
+        src="./CodingChallenge/assets/banner-image__desktop.png"
+        alt="man head in arms holding serum bottle"
+      />
+
+      <section class="hero" aria-label="Primary information">
+        <div>
+          <p>on sale now</p>
+          <h1>The Super Serum, <span>for plump, youthful skin.</span></h1>
+          <h3>
+            Powered by Retinol, the gentle age-defying serum for everyone.
+          </h3>
+          <button aria-label="Shop the Super Serum">Shop Now</button>
         </div>
-      </div>
+      </section>
 
-    </nav>
-  </header>
+      <section class="content" aria-label="Products">
+        <article class="activate">
+          <img
+            src="./CodingChallenge/assets/tile-image__activate.png"
+            alt="white activate tubes"
+          />
+          <!-- h2 -->
+          <h2>Activate</h2>
+          <!-- subheading -->
+          <p>
+            With pH-balancing cleansers to reboot skin for
+            <span>self-repair</span>
+          </p>
+          <!-- learn more -->
+          <a
+            class="learn-more"
+            href="#"
+            aria-label="Learn more about cleansers."
+            >Shop Cleansers</a
+          >
+        </article>
 
-  <main>
-    <!-- hero mobile -->
-    <img class="hero-mobile" src="./CodingChallenge/assets/banner-image__mobile.png" alt="man holding serum bottle">
-  
-    <!-- hero desktop -->
-    <img class="hero-desktop" src="./CodingChallenge/assets/banner-image__desktop.png" alt="man head in arms holding serum bottle">
+        <article class="accelerate">
+          <img
+            src="./CodingChallenge/assets/tile-image__accelerate.png"
+            alt="white accelerate tubes"
+          />
+          <!-- h2 -->
+          <h2>Accelerate</h2>
+          <!-- subheading -->
+          <p>With acid treatments that build skin’s resilience.</p>
+          <!-- learn more -->
+          <a
+            class="learn-more"
+            href="#"
+            aria-label="Learn more about Exfoliants"
+            >Shop Exfoliants</a
+          >
+        </article>
 
-    <section class="hero">
-      <div>
-        <p>on sale now</p>
-        <h1>The Super Serum, <span>for plump, youthful skin.</span></h1>
-        <h3>Powered by Retinol, the gentle age-defying serum for everyone.</h3>
-        <button>Shop Now</button>
-      </div>
-    </section>
-
-    <section class="content">
-      <article class="activate">
-        <img src="./CodingChallenge/assets/tile-image__activate.png" alt="white activate tubes">
-        <!-- h2 -->
-        <h2>Activate</h2>
-        <!-- subheading -->
-        <p>With pH-balancing cleansers
-        to reboot skin for <span>self-repair</span></p>
-        <!-- learn more -->
-        <a class="learn-more" href="#">Shop Cleansers</a>
-      </article>
-
-      <article class="accelerate">
-        <img src="./CodingChallenge/assets/tile-image__accelerate.png" alt="white accelerate tubes">
-        <!-- h2 -->
-        <h2>Accelerate</h2>
-        <!-- subheading -->
-        <p>With acid treatments
-        that build skin’s resilience.</p>
-        <!-- learn more -->
-        <a class="learn-more" href="#">Shop Exfoliants</a>
-      </article>
-
-      <article class="advocate">
-        <img src="./CodingChallenge/assets/tile-image__advocate.png" alt="white advocate tubes and bottles">
-        <!-- h2 -->
-        <h2>Advocate</h2>
-        <!-- subheading -->
-        <p>To nourish and protect
-        your skin’s healthy and vitality.</p>
-        <!-- learn more -->
-        <a class="learn-more" href="#">Shop Moisturisers</a>
-      </article>
-    </section>
-
-  </main>
-</body>
+        <article class="advocate">
+          <img
+            src="./CodingChallenge/assets/tile-image__advocate.png"
+            alt="white advocate tubes and bottles"
+          />
+          <!-- h2 -->
+          <h2>Advocate</h2>
+          <!-- subheading -->
+          <p>To nourish and protect your skin’s healthy and vitality.</p>
+          <!-- learn more -->
+          <a
+            class="learn-more"
+            href="#"
+            aria-label="Learn more about Moisturisers."
+            >Shop Moisturisers</a
+          >
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
