@@ -197,24 +197,38 @@ body header .nav-desktop .nav-links__nav-icon--bag:hover rect {
   stroke: #bb8934;
 }
 body main {
+  width: 100%;
   display: flex;
   flex-flow: column wrap;
   position: absolute;
   justify-content: space-around;
 }
 body main .hero {
-  top: 0;
+  position: relative;
   z-index: 0;
   width: 100%;
-  height: 750px;
+  min-height: 750px;
+  height: 61.45vw;
 }
 body main .hero__img {
-  position: absolute;
+  margin-top: 5.3%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+body main .hero__img img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 body main .hero .hero-content {
-  position: relative;
-  margin: 139px 25px 0 25px;
-  min-height: 242px;
+  position: absolute;
+  margin: 0px 0 0 23px;
   display: flex;
   flex-direction: column;
   max-width: 328px;
@@ -231,7 +245,7 @@ body main .hero .hero-content__subtitle {
 body main .hero .hero-content__title {
   position: static;
   top: calc(50% - 36px - 55px);
-  font-family: "Morion-UltraLight", serif, serif;
+  font-family: "Morion-UltraLight", serif;
   font-style: normal;
   font-weight: 100;
   font-size: 32px;
@@ -265,12 +279,13 @@ body main .hero .hero-content__main-cta:hover {
   color: #bb8934;
 }
 body main .body-content {
-  position: relative;
+  position: absolute;
+  top: 810px;
   display: flex;
-  flex-flow: column wrap;
-  align-content: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
   font-family: serif;
-  margin: 50px 25px 0 25px;
+  margin: 0 25px 0 25px;
 }
 body main .body-content .product-tile {
   margin-bottom: 60px;
@@ -296,7 +311,6 @@ body main .body-content .product-tile__tile-body {
   font-family: "AktivGrotesk-Light", sans-serif;
   font-size: 16px;
   line-height: 28px;
-  margin: 0;
   padding-right: 10px;
   word-wrap: break-word;
 }
@@ -319,8 +333,17 @@ body main .body-content .product-tile__learn-more:hover {
   header .announcement a p {
     font-size: 0.7em;
   }
+
+  main .hero .hero-content {
+    top: 20%;
+  }
 }
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 376px) {
+  main .hero .hero-content {
+    bottom: 6.77%;
+  }
+}
+@media screen and (min-width: 768px) {
   body header .announcement {
     max-height: 48px;
   }
@@ -328,48 +351,25 @@ body main .body-content .product-tile__learn-more:hover {
     top: 33.33%;
     bottom: 33.33%;
   }
-  body main .content {
+  body main .hero .hero-content {
+    margin-left: 80px;
+  }
+  body main .body-content {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
     justify-content: center;
+    top: 810px;
+    margin: 50px 0px 50 0px;
   }
-  body main .content .activate,
-body main .content .accelerate,
-body main .content .advocate {
+  body main .body-content .product-tile {
     max-width: 422px;
     margin-right: 5px;
     margin-left: 5px;
     height: 463px;
   }
-  body main .content .activate img,
-body main .content .accelerate img,
-body main .content .advocate img {
+  body main .body-content .product-tile__tile-img {
     max-width: 405px;
     max-height: 300px;
-  }
-}
-@media screen and (min-width: 768px) {
-  body main .hero div {
-    margin: 0px 80px 0 80px;
-    transform: translate(0px, 669px);
-    max-width: 600px;
-    height: 293px;
-  }
-  body main .hero div h1 {
-    font-size: 50px;
-    line-height: 60px;
-    letter-spacing: -0.05px;
-    margin: 24px 0 24px 0;
-  }
-  body main .hero div h3 {
-    margin: 0 0 24px 0;
-  }
-  body main .hero div button {
-    width: 291px;
-  }
-  body main .content {
-    margin: 50px 80px 0 80px;
   }
 }
 

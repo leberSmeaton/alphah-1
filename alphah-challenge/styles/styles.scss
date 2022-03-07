@@ -1,5 +1,8 @@
 @import "./variables";
 
+// html base font size 16px, change to 10px and then use rem to move up and down so then 16px would be 1.6rem.
+// helps vision impaired people to reset font size
+
 body {
   box-sizing: border-box;
   margin: 0;
@@ -8,6 +11,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   font-size: 16px;
+  // font-size base size is 1.6rem
 
   header {
     .announcement {
@@ -222,27 +226,44 @@ body {
   }
 
   main {
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     position: absolute;
     justify-content: space-around;
+
     .hero {
-      top: 0;
+      position: relative;
       z-index: 0;
       width: 100%;
-      height: 750px;
+      min-height: 750px;
+      height: 61.45vw;
 
       &__img {
-        position: absolute;
+        margin-top: 5.3%;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+
+        img {
+          display: block;
+          max-width: 100%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
       }
 
       .hero-content {
-        position: relative;
-        margin: 139px 25px 0 25px;
-        min-height: 242px;
+        position: absolute;
+        margin: 0px 0 0 23px;
         display: flex;
         flex-direction: column;
         max-width: 328px;
+
         &__subtitle {
           position: static;
           font-family: $aktivgrotesk-bold;
@@ -257,7 +278,7 @@ body {
           position: static;
           top: calc(50% - 72px / 2 - 55px);
 
-          font-family: $morion-ultra-light, serif;
+          font-family: $--heading-font;
           font-style: normal;
           font-weight: 100;
           font-size: 32px;
@@ -296,13 +317,13 @@ body {
     }
 
     .body-content {
-      // order: 2;
-      position: relative;
+      position: absolute;
+      top: 810px;
       display: flex;
-      flex-flow: column wrap;
-      align-content: center;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
       font-family: serif;
-      margin: 50px 25px 0 25px;
+      margin: 0 25px 0 25px;
 
       .product-tile {
         margin-bottom: 60px;
@@ -318,7 +339,7 @@ body {
         }
 
         &__tile-heading {
-          font-family: $morion-ultra-light;
+          font-family: $--heading-font;
           font-style: normal;
           font-weight: 300;
           font-size: 24px;
@@ -330,7 +351,6 @@ body {
           font-family: $aktivgrotesk-light;
           font-size: 16px;
           line-height: 28px;
-          margin: 0;
           padding-right: 10px;
           word-wrap: break-word;
         }
@@ -368,33 +388,28 @@ body {
     }
   }
 
-  // main {
-  //   img.hero-desktop {
-  //     display: none;
-  //   }
-  //   img.hero-mobile {
-  //     max-width: 100vw;
-  //   }
-  // }
+  main {
+    .hero {
+      .hero-content {
+        top: 20%;
+      }
+    }
+  }
 }
 
 // mobile +
 @media screen and (min-width: 376px) {
-  // main {
-  //   img.hero-mobile {
-  //     display: none;
-  //     object-fit: cover;
-  //   }
-  //   img.hero-desktop {
-  //     max-width: 100vw;
-  //     height: 885px;
-  //     object-fit: cover;
-  //   }
-  // }
+  main {
+    .hero {
+      .hero-content {
+        bottom: 6.77%;
+      }
+    }
+  }
 }
 
-// mobile large +
-@media screen and (min-width: 425px) {
+// ipad +
+@media screen and (min-width: 768px) {
   body {
     header {
       .announcement {
@@ -408,21 +423,27 @@ body {
       }
     }
     main {
-      .content {
+      .hero {
+        .hero-content {
+          // left: 80px;
+          // left: 5.6%;
+          margin-left: 80px;
+        }
+      }
+      .body-content {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
         justify-content: center;
+        top: 810px;
+        margin: 50px 0px 50 0px;
 
-        .activate,
-        .accelerate,
-        .advocate {
+        .product-tile {
           max-width: 422px;
           margin-right: 5px;
           margin-left: 5px;
           height: 463px;
 
-          img {
+          &__tile-img {
             max-width: 405px;
             max-height: 300px;
           }
@@ -432,50 +453,12 @@ body {
   }
 }
 
-// ipad +
-@media screen and (min-width: 768px) {
-  body {
-    // header {
-    //   .nav-mobile {
-    //     display: none;
-    //   }
-    // }
-
-    main {
-      .hero {
-        div {
-          margin: 0px 80px 0 80px;
-          transform: translate(0px, 669px);
-          max-width: 600px;
-          height: 293px;
-          h1 {
-            font-size: 50px;
-            line-height: 60px;
-            letter-spacing: -0.05px;
-            margin: 24px 0 24px 0;
-          }
-          h3 {
-            margin: 0 0 24px 0;
-          }
-          button {
-            width: 291px;
-          }
-        }
-      }
-      .content {
-        margin: 50px 80px 0 80px;
-      }
-    }
-  }
-}
-
-// ipad -
-@media screen and (max-width: 767px) {
-  // body {
-  //   header {
-  //     .nav-desktop {
-  //       display: none;
-  //     }
-  //   }
-  // }
-}
+// @media screen and (min-width: 1440px) {
+//   body {
+//     main {
+//       .hero {
+//         max-height: 885px;
+//       }
+//     }
+//   }
+// }
