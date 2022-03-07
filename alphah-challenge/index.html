@@ -114,7 +114,7 @@
         </a>
       </nav>
 
-      <nav class="nav-desktop" aria-label="Main Desktop navigation">
+      <!-- <nav class="nav-desktop" aria-label="Main Desktop navigation">
         <a
           class="nav-desktop__black_logo"
           href="#"
@@ -285,25 +285,44 @@
             </a>
           </div>
         </div>
-      </nav>
+      </nav> -->
     </header>
 
     <main aria-label="Main Alpha-H Page Content">
-      <!-- hero mobile -->
+      <!-- hero mobile
       <img
         class="hero-mobile"
         src="./CodingChallenge/assets/banner-image__mobile.png"
         alt="man holding serum bottle"
       />
-
-      <!-- hero desktop -->
+      
+      // hero desktop
       <img
         class="hero-desktop"
         src="./CodingChallenge/assets/banner-image__desktop.png"
         alt="man head in arms holding serum bottle"
-      />
+      /> -->
 
       <section class="hero" aria-label="Primary information">
+        <picture class="hero__img">
+          <source
+            class="hero-mobile"
+            media="(max-width: 375px)"
+            srcset="./CodingChallenge/assets/banner-image__mobile.png"
+            alt="man holding serum bottle"
+          />
+          <source
+            class="hero-desktop"
+            media="(min-width: 1440px)"
+            srcset="./CodingChallenge/assets/banner-image__desktop.png"
+            alt="man head in arms holding serum bottle"
+          />
+          <img
+            src="./CodingChallenge/assets/banner-image__desktop.png"
+            alt="man head in arms holding serum bottle"
+          />
+        </picture>
+
         <div class="hero-content">
           <p class="hero-content__subtitle">on sale now</p>
           <h1 class="hero-content__title">
@@ -321,7 +340,7 @@
         </div>
       </section>
 
-      <section class="content" aria-label="Products">
+      <section class="body-content" aria-label="Products">
         <article class="product-tile activate">
           <img
             class="product-tile__tile-img"
