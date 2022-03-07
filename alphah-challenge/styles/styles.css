@@ -80,10 +80,22 @@ body header .nav-mobile {
   z-index: 1;
   position: absolute;
 }
-body header .nav-mobile svg.white_logo path {
+body header .nav-mobile__menu:hover path {
+  stroke: #bb8934;
+}
+body header .nav-mobile__white_logo path {
   fill: white;
   height: 26px;
   width: 125px;
+}
+body header .nav-mobile__white_logo path:hover {
+  fill: #bb8934;
+}
+body header .nav-mobile__bag:hover path {
+  stroke: #bb8934;
+}
+body header .nav-mobile__bag:hover rect {
+  stroke: #bb8934;
 }
 body header .nav-desktop {
   display: flex;
@@ -95,27 +107,27 @@ body header .nav-desktop {
   margin-top: 40px;
   padding: 0 88px;
 }
-body header .nav-desktop a.__black_logo svg {
+body header .nav-desktop__black_logo svg {
   width: 139px;
   height: 29px;
 }
-body header .nav-desktop a.__black_logo svg g path {
+body header .nav-desktop__black_logo svg g path {
   fill: #373737;
 }
-body header .nav-desktop a.__black_logo:hover {
+body header .nav-desktop__black_logo:hover {
   cursor: pointer;
 }
-body header .nav-desktop a.__black_logo:hover svg g path {
+body header .nav-desktop__black_logo:hover svg g path {
   fill: #bb8934;
 }
 body header .nav-desktop .nav-links {
   display: flex;
   flex-direction: row;
 }
-body header .nav-desktop .nav-links .__nav-view {
+body header .nav-desktop .nav-links__nav-view {
   margin: 0 15px;
 }
-body header .nav-desktop .nav-links .__nav-view ul {
+body header .nav-desktop .nav-links__nav-view ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -123,7 +135,7 @@ body header .nav-desktop .nav-links .__nav-view ul {
   list-style-type: none;
   padding-left: 0;
 }
-body header .nav-desktop .nav-links .__nav-view ul li {
+body header .nav-desktop .nav-links__nav-view ul li {
   font-family: "AktivGrotesk-Regular", sans-serif;
   font-size: 16px;
   line-height: 19px;
@@ -131,57 +143,57 @@ body header .nav-desktop .nav-links .__nav-view ul li {
   text-align: center;
   color: #373737;
 }
-body header .nav-desktop .nav-links .__nav-view ul li a {
+body header .nav-desktop .nav-links__nav-view ul li a {
   text-decoration: none;
   color: #373737;
 }
-body header .nav-desktop .nav-links .__nav-view ul li a:hover {
+body header .nav-desktop .nav-links__nav-view ul li a:hover {
   color: #bb8934;
 }
-body header .nav-desktop .nav-links .__nav-view ul li:last-child {
+body header .nav-desktop .nav-links__nav-view ul li:last-child {
   padding-right: 0px;
 }
-body header .nav-desktop .nav-links .__nav-icon {
+body header .nav-desktop .nav-links__nav-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body header .nav-desktop .nav-links .__nav-icon .--account {
+body header .nav-desktop .nav-links__nav-icon--account {
   padding: 0 20px 0 10px;
 }
-body header .nav-desktop .nav-links .__nav-icon .--account path,
-body header .nav-desktop .nav-links .__nav-icon .--account circle {
+body header .nav-desktop .nav-links__nav-icon--account path,
+body header .nav-desktop .nav-links__nav-icon--account circle {
   stroke: #373737;
 }
-body header .nav-desktop .nav-links .__nav-icon .--account:hover path,
-body header .nav-desktop .nav-links .__nav-icon .--account:hover circle {
+body header .nav-desktop .nav-links__nav-icon--account:hover path,
+body header .nav-desktop .nav-links__nav-icon--account:hover circle {
   stroke: #bb8934;
 }
-body header .nav-desktop .nav-links .__nav-icon .--search circle {
+body header .nav-desktop .nav-links__nav-icon--search circle {
   stroke: #373737;
 }
-body header .nav-desktop .nav-links .__nav-icon .--search rect {
+body header .nav-desktop .nav-links__nav-icon--search rect {
   stroke: #373737;
   fill: #373737;
 }
-body header .nav-desktop .nav-links .__nav-icon .--search:hover circle {
+body header .nav-desktop .nav-links__nav-icon--search:hover circle {
   stroke: #bb8934;
 }
-body header .nav-desktop .nav-links .__nav-icon .--search:hover rect {
+body header .nav-desktop .nav-links__nav-icon--search:hover rect {
   stroke: #bb8934;
   fill: #bb8934;
 }
-body header .nav-desktop .nav-links .__nav-icon .--bag {
-  padding-right: 20px;
+body header .nav-desktop .nav-links__nav-icon--bag {
+  padding-right: 15px;
 }
-body header .nav-desktop .nav-links .__nav-icon .--bag rect,
-body header .nav-desktop .nav-links .__nav-icon .--bag path {
+body header .nav-desktop .nav-links__nav-icon--bag rect,
+body header .nav-desktop .nav-links__nav-icon--bag path {
   stroke: #373737;
 }
-body header .nav-desktop .nav-links .__nav-icon .--bag:hover path {
+body header .nav-desktop .nav-links__nav-icon--bag:hover path {
   stroke: #bb8934;
 }
-body header .nav-desktop .nav-links .__nav-icon .--bag:hover rect {
+body header .nav-desktop .nav-links__nav-icon--bag:hover rect {
   stroke: #bb8934;
 }
 body main .hero {
@@ -190,14 +202,14 @@ body main .hero {
   z-index: 0;
   width: 100%;
 }
-body main .hero div {
+body main .hero .hero-content {
   margin: 139px 25px 0 25px;
   min-height: 242px;
   display: flex;
   flex-direction: column;
   max-width: 328px;
 }
-body main .hero div p {
+body main .hero .hero-content__subtitle {
   position: static;
   font-family: "AktivGrotesk-Bold", sans-serif;
   font-size: 12px;
@@ -206,7 +218,7 @@ body main .hero div p {
   text-transform: uppercase;
   margin: 0;
 }
-body main .hero div h1 {
+body main .hero .hero-content__title {
   position: static;
   top: calc(50% - 36px - 55px);
   font-family: "Morion-UltraLight", serif, serif;
@@ -217,10 +229,10 @@ body main .hero div h1 {
   letter-spacing: -0.028px;
   margin: 16px 0;
 }
-body main .hero div h1 span {
+body main .hero .hero-content__title span {
   color: white;
 }
-body main .hero div h3 {
+body main .hero .hero-content__body {
   position: static;
   font-family: "AktivGrotesk-Light", sans-serif;
   font-weight: normal;
@@ -229,7 +241,7 @@ body main .hero div h3 {
   line-height: 24px;
   margin: 0 0 16px 0;
 }
-body main .hero div button {
+body main .hero .hero-content__main-cta {
   font-family: "AktivGrotesk-Medium", sans-serif;
   position: static;
   font-size: 16px;
@@ -239,7 +251,7 @@ body main .hero div button {
   height: 60px;
   width: 100%;
 }
-body main .hero div button:hover {
+body main .hero .hero-content__main-cta:hover {
   color: #bb8934;
 }
 body main .content {
@@ -249,9 +261,7 @@ body main .content {
   font-family: serif;
   margin: 50px 25px 0 25px;
 }
-body main .content .activate,
-body main .content .accelerate,
-body main .content .advocate {
+body main .content .product-tile {
   margin-bottom: 60px;
   height: 420px;
   display: flex;
@@ -259,15 +269,11 @@ body main .content .advocate {
   justify-content: space-between;
   max-width: 327px;
 }
-body main .content .activate img,
-body main .content .accelerate img,
-body main .content .advocate img {
+body main .content .product-tile__tile-img {
   min-width: 327px;
   min-height: 245px;
 }
-body main .content .activate h2,
-body main .content .accelerate h2,
-body main .content .advocate h2 {
+body main .content .product-tile__tile-heading {
   font-family: "Morion-UltraLight", serif;
   font-style: normal;
   font-weight: 300;
@@ -275,9 +281,7 @@ body main .content .advocate h2 {
   line-height: 28px;
   margin: 0;
 }
-body main .content .activate p,
-body main .content .accelerate p,
-body main .content .advocate p {
+body main .content .product-tile__tile-body {
   font-family: "AktivGrotesk-Light", sans-serif;
   font-size: 16px;
   line-height: 28px;
@@ -285,9 +289,7 @@ body main .content .advocate p {
   padding-right: 10px;
   word-wrap: break-word;
 }
-body main .content .activate a,
-body main .content .accelerate a,
-body main .content .advocate a {
+body main .content .product-tile__learn-more {
   font-family: "AktivGrotesk-Medium", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -296,9 +298,7 @@ body main .content .advocate a {
   text-underline-offset: 10px;
   color: #373737;
 }
-body main .content .activate a:hover,
-body main .content .accelerate a:hover,
-body main .content .advocate a:hover {
+body main .content .product-tile__learn-more:hover {
   color: #bb8934;
   text-decoration-color: #bb8934;
 }

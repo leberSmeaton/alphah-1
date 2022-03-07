@@ -65,11 +65,33 @@ body {
       z-index: 1;
       position: absolute;
 
-      svg.white_logo {
+      &__menu {
+        &:hover {
+          path {
+            stroke: $copper;
+          }
+        }
+      }
+
+      &__white_logo {
         path {
           fill: white;
           height: 26px;
           width: 125px;
+          &:hover {
+            fill: $copper;
+          }
+        }
+      }
+
+      &__bag {
+        &:hover {
+          path {
+            stroke: $copper;
+          }
+          rect {
+            stroke: $copper;
+          }
         }
       }
     }
@@ -84,7 +106,7 @@ body {
       margin-top: 40px;
       padding: 0 88px;
 
-      a.__black_logo {
+      &__black_logo {
         svg {
           width: 139px;
           height: 29px;
@@ -110,7 +132,7 @@ body {
         display: flex;
         flex-direction: row;
 
-        .__nav-view {
+        &__nav-view {
           margin: 0 15px;
           ul {
             display: flex;
@@ -140,12 +162,12 @@ body {
           }
         }
 
-        .__nav-icon {
+        &__nav-icon {
           display: flex;
           justify-content: space-between;
           align-items: center;
 
-          .--account {
+          &--account {
             padding: 0 20px 0 10px;
             path,
             circle {
@@ -159,7 +181,7 @@ body {
             }
           }
 
-          .--search {
+          &--search {
             circle {
               stroke: $mine;
             }
@@ -178,8 +200,8 @@ body {
             }
           }
 
-          .--bag {
-            padding-right: 20px;
+          &--bag {
+            padding-right: 15px;
             rect,
             path {
               stroke: $mine;
@@ -205,13 +227,13 @@ body {
       z-index: 0;
       width: 100%;
 
-      div {
+      .hero-content {
         margin: 139px 25px 0 25px;
         min-height: 242px;
         display: flex;
         flex-direction: column;
         max-width: 328px;
-        p {
+        &__subtitle {
           position: static;
           font-family: $aktivgrotesk-bold;
           font-size: 12px;
@@ -221,7 +243,7 @@ body {
           margin: 0;
         }
 
-        h1 {
+        &__title {
           position: static;
           top: calc(50% - 72px / 2 - 55px);
 
@@ -237,7 +259,7 @@ body {
           }
         }
 
-        h3 {
+        &__body {
           position: static;
           font-family: $aktivgrotesk-light;
           font-weight: normal;
@@ -247,7 +269,7 @@ body {
           margin: 0 0 16px 0;
         }
 
-        button {
+        &__main-cta {
           font-family: $aktivgrotesk-medium;
           position: static;
           font-size: 16px;
@@ -270,9 +292,7 @@ body {
       font-family: serif;
       margin: 50px 25px 0 25px;
 
-      .activate,
-      .accelerate,
-      .advocate {
+      .product-tile {
         margin-bottom: 60px;
         height: 420px;
         display: flex;
@@ -280,12 +300,12 @@ body {
         justify-content: space-between;
         max-width: 327px;
 
-        img {
+        &__tile-img {
           min-width: 327px;
           min-height: 245px;
         }
 
-        h2 {
+        &__tile-heading {
           font-family: $morion-ultra-light;
           font-style: normal;
           font-weight: 300;
@@ -294,7 +314,7 @@ body {
           margin: 0;
         }
 
-        p {
+        &__tile-body {
           font-family: $aktivgrotesk-light;
           font-size: 16px;
           line-height: 28px;
@@ -303,7 +323,7 @@ body {
           word-wrap: break-word;
         }
 
-        a {
+        &__learn-more {
           font-family: $aktivgrotesk-medium;
           font-weight: 500;
           font-size: 14px;
