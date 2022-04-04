@@ -1,8 +1,12 @@
-# coding-challenges
+# coding-challenge from Studio-Alt for Alpha-H
 
-For all new coding challenges, please:
-1. Check out main and pull any changes
-2. Check out a new branch
-3. Create a new folder
-4. Add your files
-5. When you're ready for review, add and commit your changes and create a new PR
+This coding challenge
+
+- was created with HTML and SASS.
+- web developed from Figma design handoff.
+- mobile first with media breakpoints for tablet and desktop.
+
+**Final Screenshots**
+![screenshot of different device views top page](./alphah-challenge/CodingChallenge/assets/screenshot-device_a.png)
+
+![screenshot of different device views bottom of page](./alphah-challenge/CodingChallenge/assets/screenshot-device_b.png)
